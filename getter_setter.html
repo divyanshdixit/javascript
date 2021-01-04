@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // js object accessor 
+        // getters and setters ES5 (2009)
+
+        var person = {
+            fname:'div',
+            lname: 'dixit',
+            age: 30,
+            get name(){
+                return this.fname.toUpperCase() + this.lname.toUpperCase()
+            }
+        }
+
+        console.log(person.name);
+
+        var person1 = {
+            fname:'Div',
+            lname: 'Dixit',
+            age: '',
+            set SetAge(ager){
+                
+            }
+        }
+        
+        person1.SetAge = 'vinit';
+        console.log(person1.lname);
+
+        // performance 
+
+        
+        
+    </script>
+</body>
+</html>

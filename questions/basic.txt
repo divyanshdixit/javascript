@@ -1,0 +1,24 @@
+1 => write program for find 1 to 10 all the even number and all odd number 
+
+2 => write program for find the area of a triangle , 10, 20, 30 are three sides of it. 
+
+
+3 => 
+
+var obj = {
+    'name':'Divyansh',
+    'age':24,
+    greet:function(){
+        console.log('Hey there!');
+    }
+}
+
+ Print below line using a seprate function 'Welcome' ; 
+
+ function Welcome(){
+     console.log(`${obj.greet} my name is ${obj.name} and my age is ${obj.age}`)
+ }
+
+ Welcome();
+
+ Hey there! My name is Divyansh and my age is 24.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+            <div>
+                <h1 id="hello">  Hello </h1>
+                <button type="button" onclick="myfunction()"> Click me </button>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // recursive 
+
+       var number = prompt('enter number');
+       console.log(number.toLowerCase());
+
+        var obj1  = {
+            name: 'Divyansh'
+        }
+        // object to json
+       console.log(JSON.stringify(obj1));
+
+    //    json to object
+       var obj = JSON.parse('{"name":"Divyansh"}');
+       console.log(obj);
+
+       obj.name = 'Vinit';
+
+       obj.age = 30;
+       obj.fullname = function(){
+           return this.name;
+       }
+
+       console.log(obj.fullname());
+
+       function myfunction(){
+           document.getElementById('hello').innerHTML = obj.name;
+       }
+       
+    //   
+
+    </script>
+
+</body>
+</html>
+
