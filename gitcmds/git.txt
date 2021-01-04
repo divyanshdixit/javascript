@@ -1,0 +1,7 @@
+
+for cloning => 
+
+git clone https://github.com/divyanshdixit/javascript.git
+
+
+for add
