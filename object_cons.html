@@ -8,24 +8,32 @@
 <body>
     <script>
         
-        // object cost function
-        function car(name, modal, color){
-            this.name = name;
-            this.carcolor = color;
-            this.carmodal = modal;
+        // blueperint
+        function books(bookname, bookauthor, bookpages, bookcategory = 'No category'){
+            this.name = bookname
+            this.author = bookauthor
+            this.pages = bookpages
+            this.category = bookcategory
+            
+            // this.fun = function(){
+            //     return this.name
+            // }
         }
 
-        var firstCar = new car('car1', 'modal1', 'red'); // object consturctor
-        console.log(firstCar.carname)
-        var secondCar = new car('car2', 'modal2', 'green');
-        console.log(secondCar.carcolor)
-        var thirdCar = new car('car3', 'modal3', 'blue');
-        console.log(thirdCar.carmodal)
+        books.prototype.section = 'section1'
+        books.prototype.section2 = 'section1'
 
-        // blueprint 
+        var book1 = new books('bookname1', 'author1', 100, 'Math', '');
 
-        // proptotype
-        
+        var book2 = new books('bookname2', 'author2', 200, 'Science');
+
+        var book3 = new books('bookname2', 'author2');
+
+        var book4 = new books('bookname2', 'author2', 200, 'Bio');
+
+        console.log(book2.section, book1.section)
+        // console.log( book1.name, book2.category, book3.category, book3.pages, book1.fun())
+
 
     </script>
 </body>

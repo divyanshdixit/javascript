@@ -14,6 +14,7 @@
             fname:'div',
             lname: 'dixit',
             age: 30,
+            
             get name(){
                 return this.fname.toUpperCase() + this.lname.toUpperCase()
             }
@@ -21,17 +22,22 @@
 
         console.log(person.name);
 
+
         var person1 = {
             fname:'Div',
             lname: 'Dixit',
             age: '',
-            set SetAge(ager){
-                
-            }
+            set SetAge(x){
+                this.age = x
+            },
         }
+        console.log(person1.age);
         
-        person1.SetAge = 'vinit';
-        console.log(person1.lname);
+        person1.SetAge = 20;
+        person1.city = 'asdsa';
+       
+        console.log(person1.age);
+        console.log(person1.city);
 
         // performance 
 

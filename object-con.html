@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script> 
+        
+        // object literal 
+
+        // property  key: value
+
+        // methods , actions
+        var person = {
+            color:'fair',
+            height: 5,
+            name:'divyansh',
+            person:'sadasd',
+
+            details : function(){
+                return this.color + this.name 
+            }
+
+        }
+
+        // access to the property of obj
+       
+        person.name
+        person.color
+
+
+        console.log(person.details())
+
+        // object constructor function ()blueprint 
+
+        function persons(name, color, height, gender, city){
+            this.fullname = name,
+            this.pcolor = color,
+            this.pheight = height,
+            this.pgender = gender
+            this.city = city
+        }
+
+        var divyansh = new persons('divyansh', 'black', 5, 'male') // object const
+        var person2 = new persons('person2', 'black', 5, 'female')
+        var person3 = new persons('person3', 'black', 5, 'dontknow')
+        
+    </script>
+</body>
+</html>
