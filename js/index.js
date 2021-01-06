@@ -28,35 +28,23 @@ console.log(x);
 
 // conditonal 
 
-var age = 19;
+var age = 'asdas';
 
 
 if(age > 18){
        welcome
-}else if( age > 18){
+}else if( age < 18){
 welcome 
-}else if(age < 18){
+}else if(age == 18){
 
-}else if(age < 18){
+}else if(age < 60){
 
-}else if(age < 18){
+}else if(age > 60){
 
-}else if(age < 18){
-
-}else if(age < 18){
-
-}else if(age < 18){
-
-}else if(age < 18){
-
-}else if(age < 18){
-
-}else if(age < 18){
-
-}else if(age < 18){
+}else if(age == 60){
 
 }else{
-
+     ''   
 }
 
 switch 

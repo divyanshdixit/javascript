@@ -8,15 +8,52 @@
 <body>
     <script>
 
-        // 1
+        // 
 
-        var book1 = {
+        var book1 = { 
             name:'bookname',
             author: 'authorname',
             pages: 100,
-            category:'math',
+           
            
         }
+
+        book1.name
+
+        var book2 = { 
+            // key : value
+            name:'bookname2',
+            author: 'authorname2',
+            pages: 10,
+            category: 'other'
+           
+        }
+
+        book2.getname  = function(){
+
+        }
+
+        console.log(book2.section)
+
+        var book3 = { 
+            // key : value
+            name:'bookname',
+            author: 'authorname',
+            pages: 100,
+            category: 'other'
+        }
+
+        // list all property name
+
+        console.log(Object.keys(book1));
+        console.log(Object.values(book1));
+
+        // loop
+        for(x in book1){
+            
+              console.log(book1[x]);
+        }
+        
 
         book1.section = 'new section'
         book1.fun = function(){

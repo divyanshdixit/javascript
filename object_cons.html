@@ -8,32 +8,29 @@
 <body>
     <script>
         
-        // blueperint
-        function books(bookname, bookauthor, bookpages, bookcategory = 'No category'){
-            this.name = bookname
-            this.author = bookauthor
-            this.pages = bookpages
+        // prototype
+
+        // same type ke objects
+        function books(bookname, authorname = 'anonymus', noofpages = 10, bookcategory = 'other'){
+            this.name  = bookname
+            this.author = authorname
+            this.pages = noofpages
             this.category = bookcategory
-            
-            // this.fun = function(){
-            //     return this.name
-            // }
+        }
+        
+        books.prototype.section = 'A'
+
+        books.prototype.getname = function(){
+            return this.name;
         }
 
-        books.prototype.section = 'section1'
-        books.prototype.section2 = 'section1'
+       var book1 = new books('bookname1', 'author1', 100, 'Math');
 
-        var book1 = new books('bookname1', 'author1', 100, 'Math', '');
+       var book2 = new books('bookname2', 'author2', 200, 'science');
 
-        var book2 = new books('bookname2', 'author2', 200, 'Science');
+       var book3 = new books('bookname3', 'author3');
 
-        var book3 = new books('bookname2', 'author2');
-
-        var book4 = new books('bookname2', 'author2', 200, 'Bio');
-
-        console.log(book2.section, book1.section)
-        // console.log( book1.name, book2.category, book3.category, book3.pages, book1.fun())
-
+       console.log(book2.category, book3.category, book2.section)
 
     </script>
 </body>
