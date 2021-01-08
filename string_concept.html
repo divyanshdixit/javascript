@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var str = "my name is \"divyaassaddsasdsdsadnsh\" , address is 126\\31  "; // character escpaing 
+        console.log(str);
+
+        var str1 = '           Divyansh         '; // 
+        
+        console.log(str1.length)
+
+        // indexOf() , lastIndexOf()
+        var str2 = "Hi there dasdas asdas there dsa";
+        console.log(str2.indexOf('there'))
+
+        // slice(), substring(), substr(start, length)
+
+        // slice(start, end) => end not included 
+
+        var str3 = "hi my name is Divyansh";
+        console.log(str3.slice(2, 10));
+        console.log(str3.slice(-10, -2));
+
+        var str3 = "hi my name is Divyansh";
+        console.log(str3.slice(0,-1)) // start , end 
+
+        // substring(start, end) => can't accept -ve numbers
+        
+        console.log(str3.substring(2, 10)); // start , end
+
+
+        // substr(start, length of part you want)  => can accpet -ve numbers
+
+        console.log(str3.substr(2, 12)) // s
+
+        // replace()
+        var str4 = str3.replace('Divyansh', 'VINIT'); // gives new string not replace old one 
+        console.log(str4)
+
+        // toUpperCase(), toLowerCase()
+
+        // trim() => remove white space from both sdes
+        console.log(str1.trim())
+        
+        // charAt(postion)
+        var str5 = "Divyansh";
+        console.log(str5.charAt(0)) // D
+        
+        // charCodeAt() // ascii
+        var str5 = "Divyansh";
+        console.log(str5.charCodeAt(9))
+
+    </script>
+</body>
+</html>
