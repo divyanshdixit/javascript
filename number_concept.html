@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .error{
+        color: #000
+    }
+    </style>
+</head>
+<body>
+     000
+     001
+     010
+     011
+     100
+    <script>
+
+
+        var x = NaN;
+        var y = 4;  // number
+//  ========> left to right  num1 + num2 1020
+        var z = (x + y); // return NaN
+
+        console.log(typeof(x));
+       
+        // if(isNaN(z)){
+        //     console.log( 'not a number');
+        // }else{
+        //     console.log( 'number');
+        // }
+
+        var t = 0xff // base 16
+        console.log(t)
+
+        var f = 09; // octal base 8
+        var g = 1;
+        console.log(f + g);
+
+        // toString()
+        console.log(y.toExponential(2));// base 
+
+
+        // change number to obejct
+
+        var y = new Number(4);
+        console.log(typeof(y));
+
+        // toFixed() => return string
+        var r = 5/3;
+        console.log(r.toFixed(4)) // parseInt()
+
+        // toPrecision(1)
+        // 9.65 9.7
+
+        // valueOf() return a number as a number
+
+        var k = '10';
+        // parseInt()
+        // parseFloat() decimal
+        console.log(parseFloat(k));
+        console.log(k.valueOf());
+
+        var c = Number.MIN_VALUE;
+        console.log(c);
+
+    </script>
+</body>
+</html>

@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .error{
+            border-color:red;
+        }
+    </style>
 </head>
+
 
 <body>
 
@@ -32,7 +38,7 @@
                         <!-- <p>Some text in the modal.</p> -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" onclick="changeModel()" data-dismiss="modal">Clear Status</button>
+                        <button type="button" class="btn btn-default" onclick="myfunction()" data-dismiss="modal">Clear Status</button>
                     </div>
                 </div>
 
@@ -41,11 +47,22 @@
 
     </div>
     <script>
-        function changeModel(){
-             var a = document.getElementById('text').value;
-             console.log(a);
-             document.getElementById('status').innerText = a
-
+        $('#text').on('hidden.bs.modal', function (e) {
+            $('#myModal').modal('hide')
+        })
+        var values = document.getElementById('text');
+        function myfunction(){
+            if(values.value == ''){
+                console.log('please inoput value first');
+                // DOM
+            values.classList.add('error')
+            $('#myModal').on('hidden.bs.modal', function (e) {
+                $('#myModal').modal('show')
+            })
+            return false;
+            }else{
+            document.getElementById('status').innerText = document.getElementById('text').value
+            }
         }
     </script>
 
