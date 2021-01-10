@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var str = " randome \\string ";
+        var str1 = "    Divyansh   "
+
+        var str2 = "Hi there dasdas there asdas there dsa";
+        var index = str2.indexOf('there'); // 3 + 5 8 , 8 
+        // slice(start), if end is not incuded then get the rest of the stin from start point
+       
+        var str3 = str2.slice(8);
+        index = str3.indexOf('there');
+
+        // function getIndex(str){
+        //     index = str.indexOf('there');
+        // }
+
+        // // getIndex(str)
+        // // getIndex(str)
+
+        // for(i=1;i <=n; i++){
+        //     var str3 = str2.slice();
+        //     getIndex(str)
+        // }
+
+        console.log(index);
+
+        var normal = "Divyansh"; // D 
+        var reverse = ''; //  
+
+        // chaining methods
+        console.log(normal.split('').reverse().join(''));
+
+        var len = normal.length; // 8 -
+        var count = 1;
+
+        for(i=0; i <len ; i++){
+              
+            reverse[i] = normal[len-count]; // [0] = 7 , [1] = 6
+            count++;
+        }
+        console.log(reverse.join(''));
+        
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

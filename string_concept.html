@@ -9,23 +9,25 @@
     
     <script>
 
-        var str = "my name is \"divyaassaddsasdsdsadnsh\" , address is 126\\31  "; // character escpaing 
+        var str = "my name is \"divyaassaddsasdsdsadnsh\" , address is 126\\31  "; // character escpaing  \
         console.log(str);
 
-        var str1 = '           Divyansh         '; // 
+        var str1 = '           Divyansh         '; // 32
         
         console.log(str1.length)
 
-        // indexOf() , lastIndexOf()
-        var str2 = "Hi there dasdas asdas there dsa";
-        console.log(str2.indexOf('there'))
+        // indexOf() , lastIndexOf() => return the postion number for searching keyword
+        var str2 = "Hi there dasdas there asdas there dsa";
+        console.log(str2.indexOf('there')) // var thereIndex = 3+5 8
 
+
+        'stringstringstringstring string stringstringstringstring string stringstringstring' ri
         // slice(), substring(), substr(start, length)
 
         // slice(start, end) => end not included 
 
         var str3 = "hi my name is Divyansh";
-        console.log(str3.slice(2, 10));
+        console.log(str3.slice(3, 10));
         console.log(str3.slice(-10, -2));
 
         var str3 = "hi my name is Divyansh";
@@ -33,12 +35,12 @@
 
         // substring(start, end) => can't accept -ve numbers
         
-        console.log(str3.substring(2, 10)); // start , end
+        console.log(str3.substring(2,10 )); // start , end
 
 
         // substr(start, length of part you want)  => can accpet -ve numbers
 
-        console.log(str3.substr(2, 12)) // s
+        console.log(str3.substr(2, 6)) // s
 
         // replace()
         var str4 = str3.replace('Divyansh', 'VINIT'); // gives new string not replace old one 
@@ -51,17 +53,18 @@
         
         // charAt(postion)
         var str5 = "Divyansh";
-        console.log(str5.charAt(0)) // D
+        console.log(str5.charAt(1)) // D str5[0]
         
         // charCodeAt() // ascii
         var str5 = "Divyansh";
-        console.log(str5.charCodeAt(9))
+        console.log(str5.charCodeAt(0))
 
-        // split method
+        // split method => return array 
 
-        var str6 = "divyansh|vinit"
-        var arr = str6.split('|') // delimeter
+        var str6 = "divyansh $ vinit ,asdsad, asdsadasd, assdadas" 
+        var arr = str6.split('$') // delimeter[] 1 2
 
+        var str7 = 'Divyansh';
 
 
     </script>

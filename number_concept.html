@@ -20,8 +20,20 @@
     <script>
 
 
-        var x = NaN;
-        var y = 4;  // number
+        var x = 5;
+        var y = 4;  
+        var z = '9'; // '99'
+        var a = 10;// '9910'
+        var b = 20;//991020
+        var c = x + y + z + a + b + c; // 129,
+
+        var x = '5';
+        var y = 4;  
+        var z = '9';
+        var a = 10;
+        var b = 20;
+        var c = x + y + z + a + b + c; // 
+        // number
 //  ========> left to right  num1 + num2 1020
         var z = (x + y); // return NaN
 
@@ -50,8 +62,8 @@
         console.log(typeof(y));
 
         // toFixed() => return string
-        var r = 5/3;
-        console.log(r.toFixed(4)) // parseInt()
+        var r = 5/3;1.66
+        console.log(r.toFixed(2)) // parseInt()
 
         // toPrecision(1)
         // 9.65 9.7
