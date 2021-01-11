@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        var str = "Rajesh"; // string 
+        var reverseString = '' // array 
+
+        // first method
+
+        // var splitString = str.split('') // array 
+        // console.log(splitString.reverse());
+        // console.log(splitString.join(''))
+
+        // chaining method
+
+        // console.log(str.split('').reverse().join(''));
+
+        // second method
+        var len = str.length;
+        var count = 1;
+
+        for(i=0; i<len; i++ ){
+             reverseString = reverseString + str[len-count];//  '' + h => 'h' + s => 'hs' + e => 'hse' +  
+             
+             count++;
+        }
+        console.log(reverseString);
+
+
+    </script>
+</body>
+</html>
