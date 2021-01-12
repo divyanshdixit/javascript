@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printValue(x){
+            console.log(x); // 1 2
+
+            x++; //2 3
+            if(x <= 10){
+                return printValue(x) 
+            }
+            
+        }
+
+
+        console.log(printValue(1))
+
+        // 1 to 10 
+        var arr = []; 
+        var sum = 0;
+
+        function get(n){
+            for(i=1; i<n; i++){
+                if(i%3 == 0 || i%5 == 0){
+                    arr.push(i);
+                    sum = sum + i;
+                }
+            }
+            return [arr, sum];
+        }
+
+        console.log(get(20));
+    </script>
+</body>
+</html>

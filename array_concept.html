@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // concept of array: Index
+
+        var x = 10;// string
+        var y =120;// number
+        var z =30;
+
+        x = 20;
+
+        // array literal 
+        var nums = [10, 20, 30] // [0,1,2]
+
+        console.log(nums[0]) // 10
+        console.log(nums[1])
+        console.log(nums[2])
+
+        // type of array retun object
+        console.log(typeof(nums)) // object
+
+        nums[1] = 'divyansh';
+        console.log(nums[1])
+        // new keyword
+        
+
+        // var numbers = new Array(10) // [ ,  ,  ,  ,  ,  ,  ,  , ]
+        // console.log(numbers[0])
+
+        // full access
+        console.log(nums)
+
+        // array elements [object, function, numbers, array, string]
+        var arr = [
+            {}, // object
+            20,
+            [],
+            function(){},
+            'jhgh'
+        ]
+
+        console.log(nums.length)
+
+        // looping thorugh an array
+
+        var newArr = [1,2,3,4,5] // 5
+
+        for(i=0;i<newArr.length;i++){
+            console.log(newArr[i], i)
+        }
+
+        newArr.forEach( function(v,i){
+            console.log(v, i);
+        } )
+
+        //  add new element in array in the end :
+
+        newArr.push(6) // return new length [1,2,3,4,5,6, 7]
+
+        console.log(newArr)
+
+        newArr.pop() // return removed element [10,20,30,40,50,70]
+        console.log(newArr)
+
+        // newArr[newArr.length] = 70 // newArr[5] = 70
+        console.log(newArr)
+
+        // Associative array : does not exist
+
+        var arr1 = [];
+        arr1[0] = 10;
+        arr1[1] = 100;
+
+        console.log(arr1[0]);
+
+        arr1['name'] = 'divyansh';
+
+        var x = 10;
+
+        // how to check the array isarray or not 
+        Array.isArray(newArr) // ECMASCRIPT 5 => old browsers
+
+        // function isItArray(){
+
+        // }
+
+        console.log(newArr instanceof Array)// true , false
+
+    </script>
+</body>
+</html>
