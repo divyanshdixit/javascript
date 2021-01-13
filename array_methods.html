@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // toString(): convert array to string (,)
+        var arr = ['rajesh', 'mohan', 'Divyansh'];
+        var nums = [10,20,30,40];
+
+        console.log(typeof(arr.toString()));
+
+        // join(): convert array to string using delimeter
+        console.log(arr.join(''));
+
+        
+        // pop() , push('item')
+
+        // shifting array elements 
+        // shift() remove first element
+
+        var newArr = nums.shift();
+        console.log(newArr, nums);
+
+        // unshift() => add new element at the start
+        var newLength = nums.unshift(50);
+        console.log(newLength, nums);
+
+        // splicing(position(index), nunber of item you want to remove, 100, 200 ) => add new item, remove an item
+
+        nums.splice(2,1, 100, 200);
+        console.log(nums);
+
+        // remove item using splice
+        nums.splice(1,2);
+        console.log(nums);
+
+        // removing last item using splice
+
+        nums.splice(nums.length-1,1)
+        console.log(nums);
+
+        // merging the arrays: using concat() => return new array willnot chnage the original array 
+
+        var even = [2,4,6, 7, 9, 10, 80, 15]; // 8 add
+        var odd = [3,5, 1,1, 5, 6];
+        var odd1 = [1,3,5, 9];
+
+        var evenOdd = odd.concat(even, odd1); // merge 2 array
+        
+        var strignAdd = odd.concat('8')
+        
+        console.log(odd, evenOdd, strignAdd);
+
+        // slicing an array : slice(start, end) // index , ending index will not include
+
+        console.log(even.slice(-3));
+
+        // find the max & min value in the goven array:
+
+        // constructor: function Array()
+        console.log(odd.constructor)
+
+        // entries()  array itertor
+        var iterate = even.entries()
+
+        for(i of iterate ){ // for of
+            console.log(i);
+        }
+
+        // indexOf, lastIndexOf() => reutnr the index of given value from array
+
+        console.log(odd.indexOf(1)) // want to get index number
+
+        var num = [1,2,2,2,2,2,2,2,2,2,2,3,4,5]
+        console.log(num.lastIndexOf(10)) 
+
+        
+    </script>
+</body>
+</html>
