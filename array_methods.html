@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/array.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -79,7 +80,46 @@
         var num = [1,2,2,2,2,2,2,2,2,2,2,3,4,5]
         console.log(num.lastIndexOf(10)) 
 
+        // map() function => return new Array , filter() , forEach() 
+
+        var arrNum = [2, 4, 10, 6, 11, 18, 19, 20];
+        // callback function 
+        var mapValue = arrNum.map(function(value){ // value (value of index), index number(optional),  array(optiona)
+            return value*2 ; // 2*2
+        })  // []
+
+        console.log(mapValue);
+
+        // filter()  => return new Array with result element
         
+        var filterVal = arrNum.filter( (value) => {
+            return value>=18;
+        })
+
+        console.log(filterVal);
+
+        //  forEach() => 
+
+        arrNum.forEach( (value) => {
+            console.log(value*2) ;
+        });
+
+        // Prototype: gloabl object constructor 
+        
+        var str = [ 'vinit', 'rajesh', 'divyansh']
+        
+        console.log(str.makeUpperCase());
+        
+        // reverse() 
+
+        str.reverse()
+
+        // sort() // compare function
+
+        str.sort()
+
+        
+
     </script>
 </body>
 </html>
