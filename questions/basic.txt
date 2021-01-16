@@ -22,3 +22,26 @@ var obj = {
  Welcome();
 
  Hey there! My name is Divyansh and my age is 24.
+
+
+ ========>
+
+ 1=> Find out the given number is narcissistic or not return true and false.
+
+ 2 => Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+Examples:
+
+solution('abc') // should return ['ab', 'c_']
+solution('abcdef') // should return ['ab', 'cd', 'ef']
+
+
+3=> Your goal in this is to make and implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b.
+
+arrayDiff([1,2],[1]) ==> [2]
+
+If a value is present in b, all of its occurrences must be removed from the other:
+
+arrayDiff([1,2,2,2,3],[2]) ==>  [1,3]
