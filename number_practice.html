@@ -12,18 +12,18 @@
         function solution(str){
             var arrsplit = str.split('');
             var len = arrsplit.length;
-            var arr = [];
+            var arr = []; // 
             var addstr = '';
-            if(len%2 != 0){
+            if(len%2 != 0){ // odd 
                 for(i=0;i<len;i++){
-                    if(addstr.length != 2){
-                        addstr += str[i];
+                    if(addstr.length != 2){ // 0!=2, 1!=2, 2!=2
+                        addstr = addstr + str[i]; // '' + a => a + b => ab
                     }
-                    if(i == arrsplit.length -1 ){
-                        addstr += '_';
+                    if(i == arrsplit.length -1 ){ // 2 == 2
+                        addstr = addstr + '_'; // c_
                     }
-                    if(addstr.length == 2){
-                       arr.push(addstr);
+                    if(addstr.length == 2){ // 2==2 , ab, c_
+                       arr.push(addstr); // [ab, c_]
                         addstr = '';
                     }
                 }
@@ -41,30 +41,31 @@
                 return arr;
             }
         }
+        console.log(solution('abcd')); // even 
 
         */
-        function solution(str){
+        function solution(str){ // ab,cd
             // var arrsplit = str.split('');
-            var len = str.length;
+            var len = str.length; // 4
             var arr = [];
             var addstr = '';
-            for(i=0;i<len;i++){
-                // if(addstr.length != 2){
-                    addstr += str[i];
-                // }
-                if(len%2 != 0){
+            for(i=0;i<len;i++){ // 0, 1, 2, 3
+                
+                addstr += str[i]; // '' + a, a + b , c d
+                
+                if(len%2 != 0){ // 
                     if(i == len -1 ){
                         addstr += '_';
                     }
                 }
-                if(addstr.length == 2){
-                    arr.push(addstr);       
-                    addstr = '';
+
+                if(addstr.length == 2){ // 2 == 2
+                    arr.push(addstr); // [ab, cd]       
+                    addstr = ''; // ''
                 }
             }
             return arr;
         }
-
         // 
 
         function solition(str){
@@ -74,13 +75,12 @@
             if(len%2 != 0){
                 str = str + '_';
             }
-            while(i<len){
-                arr.push(str[i] + str[i+1]);
-                i+=2;
+            while(i<len){ // a + b, cd
+                arr.push(str[i] + str[i+1]); // [ab, c_]
+                i = i+2; // 2 +2 4
             }
+            return arr;
         }
-
-        console.log(solution('abcd'));
 
 
         // 

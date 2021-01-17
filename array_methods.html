@@ -112,14 +112,37 @@
         
         // reverse() 
 
-        str.reverse()
+        console.log(str.reverse());
 
         // sort() // compare function
 
-        str.sort()
+        var src = ['abc', 'xyz', 'aabbcc']
 
+        var numsrc = [22, 21, 121, 22] // 21,22, 121,22
+        console.log(numsrc.sort())
+ // not correct
         
+        console.log(
+            numsrc.sort(
+                function comparesggg(a,b){
+                    return b-a;
+                }
+                )
+                );
+        
+                // fisher yates method
 
+                Math.random
+
+                var car =[
+                     {name:'car1',amount:1000},
+                     {name:'bmw',amount:2000},
+                     {name:'suzuki', amount:3000}
+                ];
+
+               console.log( car.sort(function(a,b){
+                   return b.amount-a.amount;
+               }));
     </script>
 </body>
 </html>
