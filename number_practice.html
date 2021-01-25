@@ -40,7 +40,7 @@
                 }
                 return arr;
             }
-        }
+        } 900ms
         console.log(solution('abcd')); // even 
 
         */
@@ -65,7 +65,7 @@
                 }
             }
             return arr;
-        }
+        } // 810
         // 
 
         function solition(str){
@@ -74,13 +74,13 @@
             var arr = [];
             if(len%2 != 0){
                 str = str + '_';
-            }
+            } // abc_, abcd
             while(i<len){ // a + b, cd
                 arr.push(str[i] + str[i+1]); // [ab, c_]
                 i = i+2; // 2 +2 4
             }
             return arr;
-        }
+        } // 700ms
 
 
         // 

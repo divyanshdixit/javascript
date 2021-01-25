@@ -10,11 +10,16 @@
 
         // 
 
-        var book1 = { 
+        var ObjectLiteralss = { 
             name:'bookname',
             author: 'authorname',
             pages: 100,
+            getBook:function(){
+                return this.name;
+            }
         }
+// console.log(x);
+        console.log(book1.getBook());
 
         book1['name']
 

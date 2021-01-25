@@ -1,7 +1,12 @@
-Array.prototype.makeUpperCase = function(){
-    
+Array.prototype.xyz = function(){
+    var arr =[];
     for(i=0;i<this.length;i++){
-        this[i] = this[i].toUpperCase();
+       arr[i] = this[i].toUpperCase();
     }
-    return this;
+    return arr; // [JS, REACT]
 }
+
+var str = ['js', 'react', 'node']
+
+var res = str.xyz()
+console.log(str)

@@ -10,17 +10,26 @@
     
     <script>
         
-        // concept of array: Index
+        // concept of array: Index, associative
+        // var a = [10 20 30 'string' {}, [], function, null] // collection of same data type, js arrays are special type of object
+
+        var arr = [10,20,30]; // index are integer in indexed array
+
 
         var x = 10;// string
         var y =120;// number
         var z =30;
+        var a ='string';
+        var a ={
+
+        };
 
         x = 20;
 
         // array literal 
         var nums = [10, 20, 30] // [0,1,2]
 
+        
         console.log(nums[0]) // 10
         console.log(nums[1])
         console.log(nums[2])
@@ -28,16 +37,22 @@
         // type of array retun object
         console.log(typeof(nums)) // object
 
+        // for updating value
+
+        var f = 10;
+        var g = 100;
+
+        nums[0] = f*g;
         nums[1] = 'divyansh';
-        console.log(nums[1])
-        // new keyword
+        console.log(nums[0]);
         
+        // new keyword
 
         // var numbers = new Array(10) // [ ,  ,  ,  ,  ,  ,  ,  , ]
         // console.log(numbers[0])
 
-        // full access
-        console.log(nums)
+        // full access of array
+        console.log(nums) // 10,20,30
 
         // array elements [object, function, numbers, array, string]
         var arr = [
@@ -62,9 +77,12 @@
             console.log(v, i);
         } )
 
+
+        // Staring array methods:
+
         //  add new element in array in the end :
 
-        newArr.push(6) // return new length [1,2,3,4,5,6, 7]
+        newArr.push(6) // return new length [1,2,3,4,5,6,] 7
 
         console.log(newArr)
 
@@ -78,16 +96,16 @@
 
         var arr1 = [];
         arr1[0] = 10;
-        arr1[1] = 100;
+        arr1[5] = 100;
+        console.log(arr1);
 
         console.log(arr1[0]);
 
-        arr1['name'] = 'divyansh';
+        arr1['name'] = 'divyansh/';
 
-        var x = 10;
 
         // how to check the array isarray or not 
-        Array.isArray(newArr) // ECMASCRIPT 5 => old browsers
+        Array.isArray(newArr) // ECMASCRIPT 6 => old browsers , ES6 2015
 
         // function isItArray(){
 
