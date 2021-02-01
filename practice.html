@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="str" value="madamm" />
+    <p id="reverse"> </p>
+    <button onclick="checkString()" data-value="">Check it!..</button>
+
+    <script>
+
+
+        function checkString() {
+            var reverseString = '';    
+            var str = document.getElementById("str").value;
+            str=str.replace(/,/g ,'');
+            str=str.replace(/ /g ,'');
+            for (var i = str.length - 1; i >= 0; i--) {
+                reverseString += str[i]; // mummadammurder
+            }
+            console.log(reverseString);
+            if (reverseString === str) {
+                
+                console.log('it is palindrom');
+                document.getElementById('reverse').innerHTML = 'it is palindrom';
+                return true;
+
+            } else {
+                console.log('it is not palindrom');
+                document.getElementById('reverse').innerHTML = 'it is not palindrom';
+                return false;
+            }
+        }
+
+        var reverse = console.log(checkString());
+        console.log(reverse);
+
+        </script>
+</body>
+</html>

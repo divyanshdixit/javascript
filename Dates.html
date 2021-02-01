@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var d = new Date()
+        d.getDay() // 1
+        var day = ['suday', 'Monday', 'Tueday']
+
+        console.log(day[d.getDay()])
+        console.log(d.getDate());
+        console.log(d.getHours());
+        console.log(d.getMinutes());
+        console.log(d.getMonth()); // startign from 0 jan , return Number
+        console.log(d.getTime()); // 1 jan 1970 - today timetamps
+
+        console.log(d.toLocaleDateString()) // retun date a string 
+
+        console.log(d.toLocaleString()) // return both data and time as a string
+
+        console.log(d.toLocaleTimeString()) // return time as astring
+
+        console.log(d.toTimeString()) // used only for server
+    
+        
+        // Date(year, month, day, hours, mins, second, milisecond )
+
+        // Date(2022, 1, 28, 11, 20) 
+
+        
+
+
+
+    </script>
+</body>
+</html>
