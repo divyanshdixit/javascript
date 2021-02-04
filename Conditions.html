@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if else else if
+        // switch case
+        // ternary operator
+
+        var x = 10;
+
+        var num = prompt('Enter your number');
+
+        // if(num >= x){ // true
+        //     alert('good to go');
+        // }else{ // when if condition will false
+        //     alert('please provide more thran 10')
+        // }
+
+        // if else elseif
+
+        if(num >= 10){ // true 11 >= 10 , 21 >= 10
+            alert('good to go');
+        }
+        else if(num > 20){  // 11 > 20
+            alert('Vlaue must be less than 20')
+        }
+        else{ // when if condition will false
+            alert('please provide more thran 10')
+        }
+
+        if( num !== 10){ // true
+            console.log('object')
+            console.log('object')
+        }else{
+        console.log('object')
+        console.log('object')
+    }
+        
+
+
+        // switch
+
+        // switch (num){
+        //     case '10': 
+        //         alert('10');
+        //         break; // break current excution 
+        //     case '11': 
+        //         alert('11');
+        //         break;
+        //     case '12': 
+        //         alert('12');
+        //         break;
+        //     default:
+        //         alert('no')
+        // }
+ 
+
+        // ternary operator: == , ===
+        
+        (num !== 10) ? 'true' : ( (num !== 8) ? 'inner true' : ( (num !== '7') ? 'inner inner true' : 'inner inner false') )
+        // (num >= 10) ? alert('true') : ( (num >= 8) ? alert('inner condition true') : alert('inner false') ) 
+    </script>
+</body>
+</html>
