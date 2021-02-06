@@ -1,1 +1,86 @@
-for, forin, foreach, while, do while
+<!-- for, forin, forof, foreach, while, do while -->
+<!-- itreables -->
+
+<!-- loop => excute the code repeatdly numver of time which are give -->
+
+<!-- for -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button"> Click </button>
+    <script>
+        // for(init,condition, increment)
+        var arr = ['Divyansh', 'vinit', 'mohan']
+        var str = 'Divyansh';
+        var i = 0;
+        for(; i<str.length; i++){
+            console.log(i, str[i]);
+        }
+
+        for(x of str){
+            console.log(x);
+        }
+
+        // forin => properties of objects
+
+        var person = {
+            name: 'Div',
+            city:'kanpur'
+        }
+
+        // person.hasOwnProperty('name') ? 'yes': 'no'
+
+        var j;
+        for(j in person){ // j is property
+            console.log(j, person[j]);
+        }
+        
+        // forof => values of object, Array, string, maps
+
+        for(k of arr){
+            console.log(k, arr[k])
+        }
+
+        // hasownproperty
+
+        // for => when we know how many number of time lop will go
+        // while() => it'll run the code when specific condi is true
+        // 
+        var l = 0;
+        var timer = true;
+        var date = new Date();
+        var second = date.getSeconds();
+        
+        while(timer){ // 8 < 8
+            l++;
+            console.log(l);
+            
+            console.log('object')
+            if(l == 10){
+                timer = false;
+                continue; // skip
+            }
+        }
+
+        // do while
+        // var m = 0;
+        // do{
+        //     console.log(m);
+        //     m++
+        // }while(false)
+
+        setInterval( () => {
+            second = date.getSeconds();
+            console.log(second)
+        } , 1000)
+
+</script>
+</body>
+</html>
