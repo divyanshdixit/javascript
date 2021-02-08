@@ -16,19 +16,22 @@
 
     <button type="button"> Click </button>
     <script>
-        // for(init,condition, increment)
+
+        // for(init,condition, increment/decrement) => array , string , number except object
         var arr = ['Divyansh', 'vinit', 'mohan']
+
         var str = 'Divyansh';
-        var i = 0;
-        for(; i<str.length; i++){
-            console.log(i, str[i]);
+        
+        for(i=0; i<arr.length; i++){ // 1, 2
+            console.log(i,  arr[i])
+            // console.log(i, arr[i]);
         }
 
-        for(x of str){
-            console.log(x);
-        }
+        // for(x of str){ // values
+        //     console.log(x);
+        // }
 
-        // forin => properties of objects
+        // forin => object , properties of objects
 
         var person = {
             name: 'Div',
@@ -37,9 +40,14 @@
 
         // person.hasOwnProperty('name') ? 'yes': 'no'
 
-        var j;
-        for(j in person){ // j is property
-            console.log(j, person[j]);
+        var x;
+        for(x in person){ // x is property
+           if( person.hasOwnProperty(x)){
+                console.log(x );
+            }else{
+                console.log('no property');
+            }
+            
         }
         
         // forof => values of object, Array, string, maps
@@ -51,23 +59,31 @@
         // hasownproperty
 
         // for => when we know how many number of time lop will go
-        // while() => it'll run the code when specific condi is true
+        // while() => it'll run the code when specific condi is true 
         // 
-        var l = 0;
+
         var timer = true;
         var date = new Date();
-        var second = date.getSeconds();
         
-        while(timer){ // 8 < 8
-            l++;
+        // while example - 1
+        var second = 1;
+
+        while(second<15){
+            console.log(second);
+            second++; 
+        }
+
+        // while example - 2
+        var l = 0;
+        
+        while(timer){
             console.log(l);
-            
-            console.log('object')
             if(l == 10){
                 timer = false;
-                continue; // skip
             }
+            l++;
         }
+
 
         // do while
         // var m = 0;
@@ -75,11 +91,12 @@
         //     console.log(m);
         //     m++
         // }while(false)
-
-        setInterval( () => {
-            second = date.getSeconds();
-            console.log(second)
-        } , 1000)
+        
+        // setInterval( () => {
+        //     date = new Date();
+        //     second = date.getSeconds();
+        //     console.log(second)
+        // } , 1000)
 
 </script>
 </body>
