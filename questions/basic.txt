@@ -69,3 +69,18 @@ var strs = '12345'; // 54321
 
 7=> find the maxium/minimum value in array 
 var arr = [2, 5, 10] // max = 10, min =2
+
+=================================== Loop and condition ====================
+
+8 - display 1 to 10 mumber using while loop
+9 - take number as input from user and add those number , when user input -ve numbers loop will terminate using while loop
+10 - Write a JavaScript program that accept two integers and display the larger.
+
+11 - Write a JavaScript program to construct the following pattern, using a nested for loop
+
+*  
+* *  
+* * *  
+* * * *  
+* * * * *
+
