@@ -1,4 +1,4 @@
-// callback, callback hell, promise, async/await (ES8)
+// callback, callback hell, promise, async/await (ES8), clousre function , oops 
 
 // callback =>
 
@@ -6,18 +6,18 @@
 // function that call inside other function that runs after the excution of outer function
 
 
-// const one = (cb) => {
+const one = (cb) => {
     
-//     console.log('one')
-//     cb()
+    console.log('one')
+    cb()
 
-// }
+}
 
-// const two = () => {
-//     console.log(obj.title)
-// }
+const two = () => {
+    console.log(obj.title)
+}
 
-// one(two);
+one(two);
 
 // api => id, 2 => username, 3 => title , body 
 
