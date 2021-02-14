@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="heading" class="cls" > Hello </h1>
+
+    <h2 id="heading_two"> heading two </h2>
+
+    <input type="text" class="form-control" name="username" placeholder="Enter ur name"/>
+    <input type="text" class="form-control" name="username" placeholder="Enter ur username"/>
+
+    <p class="cls"> Para </p>
+
+    <p class="para"> Para </p>
+
+    <button type="button" onclick="clickListner()"> Focus </button>
+
+    <script>
+
+        // DOM
+
+        // by id
+        // console.log( document.getElementById('heading_two'))
+
+        // by class
+try{
+        console.log(document.getElementsByClassName('cls'));
+
+       var classes = document.getElementsByClassName('cls');
+
+    //    console.log(classes[0], classes[1])
+
+    // by tagName
+
+    console.log(document.getElementsByTagName('p'));
+
+    
+    // by name
+
+    console.log( document.getElementsByName('username'));
+
+    function clickListner(){
+        document.getElementsByName('username')[1].style.fontSize = '25px'
+        console.log(document.getElementsByName('username')[0].value);
+    }
+        
+}catch(err){
+    console.log(err)
+}
+    </script>
+</body>
+</html>

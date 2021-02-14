@@ -78,10 +78,10 @@ var arr = [2, 5, 10] // max = 10, min =2
 
 11 - Write a JavaScript program to construct the following pattern, using a nested for loop
 
-*  
-* *  
-* * *  
-* * * *  
+*
+* *
+* * *
+* * * *
 * * * * *
 
 12- print that patterm
@@ -98,5 +98,3 @@ var arr = [2, 5, 10] // max = 10, min =2
 //   * * * *
 // * * * * *
 
-
-**=> 12 thousand 12 hundered 12
