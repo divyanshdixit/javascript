@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onmousemove="">
+    <!-- events, listener(handler) => function -->
+
+    <h1 onclick="clickListener()" id="heading"> Hello Events </h1>
+
+    <p id="para"> Hello Para </p>
+
+    <input type="text" id="name" placeholder="enter text here" onchange="getInputValue(this)"/>
+
+    <button type="button" id="clickbtn" onclick="btnClickListener(this)"> Click Me </button>
+    <br>
+
+    <select onchange="getSelectedValue(this)">
+        <option value="0"> --- </option>
+        <option value="1"> First </option>
+        <option value="2"> Second </option>
+    </select>
+
+    <script>
+        clickListener = () => {
+            alert("I'm clicked")
+        }
+
+        btnClickListener = (elem) => {
+            console.log(document.getElementById('name').value);
+            console.log(elem);
+            document.getElementById('heading').innerHTML = 'Event clicked'
+            // document.getElementById('clickbtn').innerHTML = 'Click this button'
+            elem.innerHTML = 'Click this button "this"'
+        }
+
+        getInputValue = (elem) => {
+            // alert(elem.value);
+            elem.value = elem.value.toUpperCase();
+            // elem.value elem.toUpperCase();
+        }
+
+        // mouseMove = (e) => {
+        //     console.log(e)
+        // }
+    
+        getSelectedValue = (elem) => {
+            console.log(elem.value);
+            if(elem.value == 0){
+                alert('Choose something');
+                return false;
+            }
+        }
+
+        clickEventListener = () => {
+            alert("I'm para")
+        }
+
+        document.getElementById('para').addEventListener('click',clickEventListener);
+
+    </script>
+</body>
+</html>
