@@ -24,7 +24,14 @@
         <option value="2"> Second </option>
     </select>
 
+    <!-- if form is submitted via ajax (without page load) -->
+    <form id="form1">
+        <input type="text" name="name" placeholder="enter name"/>
+        <button type="submit"> Submit </button>
+    </form>
+
     <script>
+
         clickListener = () => {
             alert("I'm clicked")
         }
@@ -55,11 +62,19 @@
             }
         }
 
-        clickEventListener = () => {
+        clickEventListener = (e) => {
+            console.log(e)
             alert("I'm para")
         }
 
+        submitForm = (e) => {
+            e.preventDefault();
+            console.log(e);
+        }
+
         document.getElementById('para').addEventListener('click',clickEventListener);
+
+        document.getElementById('form1').addEventListener('submit',submitForm);
 
     </script>
 </body>
