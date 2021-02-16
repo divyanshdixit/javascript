@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onmousemove="">
+<body onmousemove="mouseEvent()">
     <!-- events, listener(handler) => function -->
 
-    <h1 onclick="clickListener()" id="heading"> Hello Events </h1>
+    <h1 onclick="clickListener(this)" id="heading"> Hello Events </h1>
 
-    <p id="para"> Hello Para </p>
+    <!-- <p id="para"> Hello Para </p> -->
 
-    <input type="text" id="name" placeholder="enter text here" onchange="getInputValue(this)"/>
+    <!-- <input type="text" id="name" placeholder="enter text here" onchange="getInputValue(this)"/>
 
     <button type="button" id="clickbtn" onclick="btnClickListener(this)"> Click Me </button>
     <br>
@@ -22,7 +22,7 @@
         <option value="0"> --- </option>
         <option value="1"> First </option>
         <option value="2"> Second </option>
-    </select>
+    </select> -->
 
     <!-- if form is submitted via ajax (without page load) -->
     <form id="form1">
@@ -32,8 +32,11 @@
 
     <script>
 
-        clickListener = () => {
-            alert("I'm clicked")
+        clickListener = (elem) => { // arrow function are anonymous function
+            console.log(elem);
+            elem.innerHTML = 'Changed';
+            elem.style.textDecoration= 'underline';
+            // document.getElementById('heading').innerHTML = 'Changed';
         }
 
         btnClickListener = (elem) => {
@@ -46,11 +49,11 @@
 
         getInputValue = (elem) => {
             // alert(elem.value);
+            // console.log('changed');
             elem.value = elem.value.toUpperCase();
-            // elem.value elem.toUpperCase();
         }
 
-        // mouseMove = (e) => {
+        // mouseEvent = (e) => {
         //     console.log(e)
         // }
     
@@ -60,19 +63,32 @@
                 alert('Choose something');
                 return false;
             }
+            // else{
+            //     $.ajax({
+            //         url:'http://www.getStates.com',
+            //         type:'post',
+            //         data:elem.value,
+            //         success:function(res){
+
+            //         }
+            //     })
+            // }
         }
 
         clickEventListener = (e) => {
             console.log(e)
-            alert("I'm para")
+            // alert("I'm para")
         }
+
+
+        // addEventListener('event', listener)
+        // document.getElementById('para').addEventListener('click',clickEventListener);
 
         submitForm = (e) => {
             e.preventDefault();
             console.log(e);
+            console.log(document.getElementsByName('name')[0].value)
         }
-
-        document.getElementById('para').addEventListener('click',clickEventListener);
 
         document.getElementById('form1').addEventListener('submit',submitForm);
 
