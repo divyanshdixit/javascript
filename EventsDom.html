@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo" class="demo"> Demo </p>
+
+    <p id="demo1" class="demo"> 
+        <span>Second demo </span>
+        <span>Second demo </span>
+    </p>
+
+    <img src="image.png" id="image" alt="" title="" width="" height=""/>
+
+    <script>
+        
+        document.getElementsByClassName('demo')[1].innerHTML = '';
+        // dom method- 
+        // dom property- set and get
+        document.getElementById('demo').innerHTML = 'demo changed' ;
+        // get attribute value
+        console.log(document.getElementById('demo').id)
+        // set attribute value
+        document.getElementById('demo').id = 'demo_changed'
+
+        // innerHTML
+        // attribute(id,class)
+        // .style.property
+
+        // setAttribute('attribute_name','demo_changed' )
+
+        // Adding and deleting:
+
+        var x = document.createElement('p')
+        x.appendChild('span');
+        removeChild()
+
+        // find html elements by css seleector:
+
+        // all element that matches elements
+        document.querySelectorAll('p.demo') // not supported IE8 and eariler
+
+        // give only first matches element
+        document.querySelector('p.demo')
+
+
+    </script>
+</body>
+</html>

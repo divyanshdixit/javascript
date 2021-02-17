@@ -8,18 +8,48 @@
 </head>
 <body>
 
+    <p id="result"> </p>
     <h1 id="error"> Error : </h1>
 
     <script>
 
-        try{
+        // try, catch, throw, finally
+
+        // 6, 5
+        // referenceError 
+        // syntaxError
+        // typeError
+        // rangeError => out of range
+        
+        // 2/3 => = toFixed(1000) 0.61111111111111
+
+        // x = 10;
+        // y=11;
+        
+        // var z = x +  y;
+
+        try{ // try to excute the code
             var x = 10;
             var y = 20;
             var z = x + y;
             console.log(z);
-        }catch(err){
-            console.log(err);
-            document.getElementById('error').innerHTML = err;
+
+            // // name => please fill name in uppercase
+
+            // email
+            
+            if(z){
+                document.getElementById('result').innerHTML = z;
+            }else{
+                throw "addition is not successful";// throw error(exception) 
+            }
+
+        }catch(err){ // error object: name, message
+            console.log(err.message);
+            document.getElementById('error').innerHTML = err.message;
+        }
+        finally{ // run this code eithor fail or success
+            document.getElementById('body').innerHTML = 'please contact later'
         }
 
     </script>
