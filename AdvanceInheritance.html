@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // A class want to use methods or properties of other clas
+        // it can used by using inheritance. 
+
+        // 'extends' keyword used for inheritance
+
+        // the class which is extending called parent classs.\
+
+        // can reuse the code of some other class
+
+        class ParentClass {
+            getName(){
+              console.log('getname')  
+            }
+        }
+
+        class ChildClass extends ParentClass{
+            getAge(){
+
+            }
+        }
+
+        // example1: 
+
+        // if child class extends the parent class and if we use constructor method in child class
+        //  then call super() method is compulsory.
+
+        // super() method refers the parent class constructor 
+        // always used in child construtor
+
+
+        class LivingBeings{
+            constructor(type){
+                this.type = type
+            }
+
+            showType(){
+                return `I'm ${this.type} type`;
+            }
+        }
+
+        class Walk extends LivingBeings{
+            constructor(type, canWalk){
+                super(type);
+                this.canWalk = canWalk;
+            }
+
+            typeCanWalk(){
+                return `${this.showType()} can ${this.canWalk}`;
+            }
+        }
+
+        let humanBeing = new Walk('Human', 'Walk');
+        let plantBeing = new Walk('Plant', 'Not Walk');
+        console.log(humanBeing.typeCanWalk());
+        console.log(plantBeing.typeCanWalk());
+
+
+        // getters and setters:
+
+        // get and set work as a property:
+
+        class Person{
+            constructor(name) {
+                this.name = name;
+            }
+            
+            get fname(){
+                return this.name;
+            }
+
+            set fname(newName){
+                this.name  = newName;
+            }
+        }
+
+        var first = new Person('Divyansh');
+
+        console.log(first.fname);
+
+        first.fname = 'Abhishek';
+
+        console.log(first.fname);
+
+        // Hoisting:
+        
+    </script>
+
+</body>
+</html>

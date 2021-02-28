@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // static: always use static methid inside class:
+        //  static method can;t call on an object of class but the class itself
+
+        class Person{
+            constructor(name, city) {
+                this.name = name;
+                this.city = city;
+            }
+
+            static show(props){
+                return props.city;
+            }
+        }
+
+// console.log(Person.show())
+        
+        var first = new Person('Divyansh2', 'Kanpur');
+
+        console.log(Person.show(first))
+
+    </script>
+</body>
+</html>
