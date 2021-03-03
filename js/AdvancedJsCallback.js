@@ -6,22 +6,35 @@
 // function that call inside other function that runs after the excution of outer function
 
 
-const one = (cb) => {
+const one = (two) => {
     
     console.log('one')
-    cb()
+    two() // callback function 
 
 }
 
 const two = () => {
-    console.log(obj.title)
-}
 
+    console.log('two')
+}
 one(two);
+
+
+// post 
 
 // api => id, 2 => username, 3 => title , body 
 
+// country() 2sec
+// state() 1sec
+// city()
+
+// function getCountry(country(state(city))){
+
+// }
+
+
 // 3 callbacks within function
+
 
 const getValue = () => {
     
@@ -35,16 +48,15 @@ const getValue = () => {
                 var username = 'Divyansh';
                 console.log(username);
             }
-            
             setTimeout((user) => {
                 if(user == 'Divyansh'){
                     var postObj = {
                         title: 'Post title',
                         body: 'Post body'
                     }
-                    console.log(postObj);
-                    
+                    console.log(postObj);  
                 }
+
             }, 2000, username);
 
         }, 2000, idArr);
@@ -77,7 +89,4 @@ getValue();
 //     }, 2000);
 // }
 
-// // callback
-// // one(two);
-
-// // export {one, two, getData}
+// getData()
