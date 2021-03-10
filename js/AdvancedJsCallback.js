@@ -6,6 +6,18 @@
 // function that call inside other function that runs after the excution of outer function
 
 
+function cal(x, y, cb){
+    let sum = x +y;
+    cb(sum);
+}
+
+function display(res){ //callback function
+    console.log(res); // 3
+}
+
+cal(1,2,display);
+
+
 const one = (two) => {
     
     console.log('one')
@@ -39,7 +51,7 @@ one(two);
 const getValue = () => {
     
     setTimeout(() => {
-        var idArr = [1,2,3,4,5];
+        var idArr = [1,2,3,4,5]; // response from api
         console.log(idArr);
 
         // get the username based on id
@@ -90,3 +102,12 @@ getValue();
 // }
 
 // getData()
+
+
+// Asynchronous : 
+
+1
+2
+3
+
+// function workig in parallel with other function called async

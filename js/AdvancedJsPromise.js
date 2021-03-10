@@ -1,4 +1,4 @@
-// better way to handle situation like callback hell
+// better way to handle situation like callback hell (nesting of callbacks)
 
 // promise is object take excutor as a callback function, this callback initialize the promise
 // excutor have two arguments => resolve callback, => resolve the promise with the result of other callback
@@ -6,22 +6,19 @@
 
 // promise object give then(), catch() method
 
-const promObj = new Promise( (resolve, reject) => {
+const promObj = new Promise( (resolve, reject) => { // promise as an object
     setTimeout(() => {
         let arr1 = [10,20,30,40];
         // if through an api we get the response means function is successfully excuted.
         resolve(arr1);
-        reject({
-            status:500,
-            message:'Error in fetching data from api'
-        })
+        reject('Error in fetching data from api')
     }, 2000);
 });
 
-const getMultipliedNum = (arrs) => {
+const getMultipliedNum = (arrs) => { // return promise from function (async)
     return new Promise((resolve, reject) => {
         setTimeout((arr) => {
-            let mulNum = arr[0] * 2;
+            let mulNum = arr[0] * 2; // 20
             resolve(mulNum);
             reject({
                 status:500,
@@ -32,7 +29,7 @@ const getMultipliedNum = (arrs) => {
     
 }
 
-const getResultInArray = (prevResult) => {
+const getResultInArray = (prevResult) => { // return prommise 
     return new Promise((resolve, reject) => {
         setTimeout((prev) => {
             let finalValue = [prev];
@@ -51,44 +48,29 @@ const getResultInArray = (prevResult) => {
 
 const getPromiseData = (promObj) => {
     
-    promObj.then( (result) => {
+    promObj.then( (result) => { // 1
         console.log(result);
 
         // Meaning of this line is - fnction call will return the new promise and now first then()  method return that returned promise so to resolve this we use then() function again
             
-            // return getMultipliedNum(result);
-
-        // we can call then method here also but the better way to return the function and after then we can call other callback then function
-        getMultipliedNum(result)
-            .then( (res) => {
-                console.log(res);
-                //Again! - we can call then method here also but the better way to return the function and after then we can call other callback then function
-                getResultInArray(res)
-                    .then( (response) => {
-                        console.log(response)
-                    })
-                    .catch( (err) => {
-                        console.log(err)
-                    })
-            })
-            .catch( (error) => {
-                console.log(error)
-            })
+            return getMultipliedNum(result);
     })
+
     // above nested then() catch() method may be confusing so we can write in more speicific way by returning the function and call then() methid
     
-    /*
+    
         .then( (result) => {
             console.log(result);
 
             // this line means - then() function will resolve the returned promise
             return getResultInArray(result);
         })
+        
         .then( (res) => {
             console.log(res);
         })
 
-    */
+
 
     .catch( (error) => {
         console.log(error);
